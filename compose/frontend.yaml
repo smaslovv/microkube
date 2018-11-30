@@ -3,14 +3,16 @@ version: '3.6'
 services:
   frontend:
     image: node:11
+    env_file:
+      - ../config/frontend.env
     volumes:
       - ../vendor/frontend:/home/node
     command:
       - sh
       - -c
       - |
-        cd /home/node
-        node scripts/server.js
+        cd /home/node/packages/playground
+        yarn start
     labels:
       traefik.enable: true
       traefik.frontend.priority: 20
