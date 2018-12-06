@@ -126,7 +126,7 @@ namespace :service do
   end
 
   desc 'Run the frontend application'
-  task :frontend, [:command] => ['vendor:clone'] do |task, args|
+  task :frontend, [:command] => ['vendor:clone', 'vendor:build'] do |task, args|
     args.with_defaults(:command => 'start')
 
     def start
