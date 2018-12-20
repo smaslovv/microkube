@@ -5,16 +5,14 @@ services:
     image: "${FRONTEND_IMAGE}"
     labels:
       traefik.enable: true
-      traefik.frontend.rule: "PathPrefix:/;Host:www.${APP_DOMAIN}"
+      traefik.frontend.rule: "PathPrefix:/trading;Host:www.${APP_DOMAIN}"
       traefik.port: 3000
 
-  tower:
-    image: quay.io/openware/wio:0.1.0
-    user: "${UID}:${GID}"
-    command: "-d /home/app/build -s 1"
+  angular:
+    image: git.paymium.fr:5001/blockchain.io/bcio-front:develop
     volumes:
-      - ../vendor/tower:/home/app
+      - "${PWD}/config/front_env.yml:/home/node/src/environments/env.yml"
     labels:
       traefik.enable: true
-      traefik.frontend.rule: "PathPrefix:/tower;Host:www.${APP_DOMAIN}"
-      traefik.port: 8080
+      traefik.frontend.rule: "PathPrefix:/;Host:www.${APP_DOMAIN}"
+      traefik.port: 4200

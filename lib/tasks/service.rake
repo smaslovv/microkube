@@ -114,12 +114,12 @@ namespace :service do
 
     def start
       puts '----- Starting app -----'
-      sh 'docker-compose up -d peatio barong gateway'
+      sh 'docker-compose up -d peatio barong'
     end
 
     def stop
       puts '----- Stopping app -----'
-      sh 'docker-compose rm -fs peatio barong gateway'
+      sh 'docker-compose rm -fs peatio barong'
     end
 
     @switch.call(args, method(:start), method(:stop))
@@ -131,29 +131,12 @@ namespace :service do
 
     def start
       puts '----- Starting the frontend -----'
-      sh 'docker-compose up -d frontend tower'
+      sh 'docker-compose up -d frontend'
     end
 
     def stop
       puts '----- Stopping the frontend -----'
       sh 'docker-compose rm -fs frontend'
-    end
-
-    @switch.call(args, method(:start), method(:stop))
-  end
-
-  desc 'Run the tower application'
-  task :tower, [:command] => ['vendor:clone'] do |task, args|
-    args.with_defaults(:command => 'start')
-
-    def start
-      puts '----- Starting the tower -----'
-      sh 'docker-compose up -d tower'
-    end
-
-    def stop
-      puts '----- Stopping the tower -----'
-      sh 'docker-compose rm -fs tower'
     end
 
     @switch.call(args, method(:start), method(:stop))
@@ -187,7 +170,6 @@ namespace :service do
       Rake::Task["service:setup"].invoke('start')
       Rake::Task["service:app"].invoke('start')
       Rake::Task["service:frontend"].invoke('start')
-      Rake::Task["service:tower"].invoke('start')
     end
 
     def stop
@@ -196,7 +178,6 @@ namespace :service do
       Rake::Task["service:setup"].invoke('stop')
       Rake::Task["service:app"].invoke('stop')
       Rake::Task["service:frontend"].invoke('stop')
-      Rake::Task["service:tower"].invoke('stop')
     end
 
     @switch.call(args, method(:start), method(:stop))

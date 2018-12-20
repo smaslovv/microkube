@@ -3,16 +3,16 @@ apiVersion: ambassador/v0
 kind: Mapping
 name: peatio_api_mapping
 host: www.app.local
-prefix: /api/v2/peatio
-rewrite: /api/v2/
+prefix: /api/v1/peatio
+rewrite: /api/v1/
 service: peatio:8000
 ---
 apiVersion: ambassador/v0
 kind: Mapping
 name: barong_api_mapping
 host: www.app.local
-prefix: /api/v2/barong
-rewrite: /api/v2/
+prefix: /api/v1/barong
+rewrite: /api/v1/
 service: barong:8001
 ---
 apiVersion: ambassador/v0
