@@ -58,7 +58,7 @@ namespace :service do
 
   desc '[Optional] Run peatio daemons (ranger, peatio daemons)'
   task :daemons, [:command] do |task, args|
-    @daemons = %w[ranger withdraw_audit blockchain global_state deposit_collection deposit_collection_fees deposit_coin_address slave_book pusher_market pusher_member matching order_processor trade_executor withdraw_coin k]
+    @daemons = %w[deposit_coin withdraw_coin trade_executor pusher_member pusher_market order_processor matching market_ticker slave_book deposit_coin_address]
 
     args.with_defaults(:command => 'start')
 
