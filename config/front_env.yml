@@ -6,7 +6,7 @@ barong:
 api:
   url: "http://peatio.app.local/api/v2"
 tradePage:
-  url: "http://peatio.app.local/trading/btcusd"
+  url: "http://www.app.local/advance"
 applogic:
   url: "http://applogic.stage.kayen.io/api/v1"
 application_id: "ce0a13ec4b09976a4df33af64514ff75942bae30117e2a4127e866781bcb46da"
@@ -14,6 +14,6 @@ blockchainInfoUrl: "https://testnet.blockchain.info/tx/"
 currencyFormat: "USD"
 currencyName: "US Dollar"
 productName: "BCIO"
-reCaptchaSiteKey: "6LeBHl0UAAAAALq0JBMgY9_CnF35W797k7-q0edn"
+reCaptchaSiteKey: "6Lf3f3gUAAAAAE0rtFjMhs81Ml1nt-Aa6k2c8fKG"
 cookieConfigDomain:
-  url: '.blockchain.io'
+  url: '.app.local'

@@ -131,12 +131,12 @@ namespace :service do
 
     def start
       puts '----- Starting the frontend -----'
-      sh 'docker-compose up -d frontend'
+      sh 'docker-compose up -d frontend angular'
     end
 
     def stop
       puts '----- Stopping the frontend -----'
-      sh 'docker-compose rm -fs frontend'
+      sh 'docker-compose rm -fs frontend angular'
     end
 
     @switch.call(args, method(:start), method(:stop))
