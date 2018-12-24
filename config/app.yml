@@ -6,6 +6,6 @@ ssl:
   email: "support@example.com"
 vendor:
   frontend:
-    repo: "git@github.com:openware/cryptobase.git"
-    branch: "master"
-  tower: "git@github.com:openware/tower.git"
+    repo: "https://github.com/openware/cryptobase.git"
+    branch: "customer/exq365-v2-connect-barong"
+  tower: "https://github.com/openware/tower.git"

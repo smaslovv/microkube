@@ -9,6 +9,6 @@ namespace :vendor do
   desc 'Build frontend'
   task :build do
     puts '----- Building frontend -----'
-    sh "cd vendor/frontend && npm i -g lerna && yarn bootstrap && yarn build && cd ../.." unless File.exist? 'vendor/frontend/node_modules'
+    sh "cd vendor/frontend && sudo npm i -g lerna && yarn bootstrap && yarn build && cd ../.." unless File.exist? 'vendor/frontend/node_modules'
   end
 end

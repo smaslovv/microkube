@@ -4,10 +4,11 @@
   precision:            8
   base_factor:          1
   enabled:              true
-  quick_withdraw_limit: 1000
   deposit_fee:          0
   withdraw_fee:         0
   min_deposit_amount:   0
+  withdraw_limit_24h:     100
+  withdraw_limit_72h:     200
 
 - id:                   eur
   symbol:               '€'
@@ -15,10 +16,11 @@
   precision:            8
   base_factor:          1
   enabled:              true
-  quick_withdraw_limit: 1000
   deposit_fee:          0
   withdraw_fee:         0
   min_deposit_amount:   0
+  withdraw_limit_24h:     100
+  withdraw_limit_72h:     200
 
 - id:                   eth
   symbol:               'Ξ'
@@ -26,8 +28,9 @@
   precision:            8
   base_factor:          1_000_000_000_000_000_000
   enabled:              true
-  quick_withdraw_limit: 2
   deposit_fee:          0
+  withdraw_limit_24h:     100
+  withdraw_limit_72h:     200
   withdraw_fee:         0
   min_deposit_amount:   0.00021
   blockchain_key:       eth-rinkeby
@@ -48,8 +51,9 @@
   precision:            8
   base_factor:          1_000_000
   enabled:              true
-  quick_withdraw_limit: 3000
   min_deposit_amount:   1.7
+  withdraw_limit_24h:     100
+  withdraw_limit_72h:     200
   blockchain_key:       eth-rinkeby
   options:
     case_sensitive:                   false
