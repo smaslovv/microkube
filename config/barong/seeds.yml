@@ -17,7 +17,7 @@ users:
   - email: smaslov@heliostech.fr
     role: member
     state: active
-    level: 3
+    level: 2
     password: KolyaLoh123
 
 levels:

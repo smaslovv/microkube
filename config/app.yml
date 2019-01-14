@@ -7,5 +7,5 @@ ssl:
 vendor:
   frontend:
     repo: "https://github.com/openware/cryptobase.git"
-    branch: "customer/exq365-v2-connect-barong"
+    branch: "customer/exq365-v2"
   tower: "https://github.com/openware/tower.git"

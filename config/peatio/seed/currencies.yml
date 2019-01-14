@@ -7,6 +7,7 @@
   deposit_fee:          0
   withdraw_fee:         0
   min_deposit_amount:   0
+  name:                 'United States Dollar'
   withdraw_limit_24h:     100
   withdraw_limit_72h:     200
 
@@ -19,6 +20,7 @@
   deposit_fee:          0
   withdraw_fee:         0
   min_deposit_amount:   0
+  name:                 'Euro'
   withdraw_limit_24h:     100
   withdraw_limit_72h:     200
 
@@ -33,6 +35,7 @@
   withdraw_limit_72h:     200
   withdraw_fee:         0
   min_deposit_amount:   0.00021
+  name:                 'Ethereum'
   blockchain_key:       eth-rinkeby
   options:
     case_sensitive:                   false
@@ -52,6 +55,7 @@
   base_factor:          1_000_000
   enabled:              true
   min_deposit_amount:   1.7
+  name:                 'WeTrust'
   withdraw_limit_24h:     100
   withdraw_limit_72h:     200
   blockchain_key:       eth-rinkeby
